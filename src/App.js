@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import styled, { injectGlobal } from "styled-components";
+import styled from "styled-components";
+import "./App.css";
 
 /* ======================= */
 /* ===== sample data ===== */
@@ -22,22 +23,6 @@ const App = () =>
       );
     })}
   </div>;
-
-injectGlobal`
-  body {
-    margin: 0;
-    font-family: -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Helvetica,
-      Arial,
-      sans-serif,
-      "Apple Color Emoji",
-      "Segoe UI Emoji",
-      "Segoe UI Symbol";
-  }
-`;
 
 const Name = styled.h2`
   margin-top: 0;
