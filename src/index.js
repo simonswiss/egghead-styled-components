@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 
-import { injectGlobal } from "styled-components";
+import { ThemeProvider, injectGlobal } from "styled-components";
 
 injectGlobal`
   body {
@@ -21,4 +21,14 @@ injectGlobal`
   }
 `;
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const theme = {
+  primary: "#a04ed9",
+  secondary: "tomato"
+};
+
+ReactDOM.render(
+  <ThemeProvider theme={theme}>
+    <App />
+  </ThemeProvider>,
+  document.getElementById("root")
+);

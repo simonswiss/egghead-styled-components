@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
-  background: #a04ed9;
+  background: ${props => props.theme.primary};
   color: white;
   font-size: 1rem;
   padding: .75rem 2rem;
