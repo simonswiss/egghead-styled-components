@@ -22,12 +22,7 @@ injectGlobal`
 `;
 
 const theme = {
-<<<<<<< Updated upstream
-  primary: "#a04ed9",
-  secondary: "tomato"
-=======
   primary: "#a04ed9"
->>>>>>> Stashed changes
 };
 
 ReactDOM.render(
