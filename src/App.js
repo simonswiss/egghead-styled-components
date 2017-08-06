@@ -14,7 +14,7 @@ const App = () =>
       Just letting you know... We think you're awesome and we're super happy to
       have you as a customer!
     </Notice>
-    <Quote>Wooooaa, this is sooo so cool guys!!</Quote>
+    <Quote>Wooooaa, this is sooo so cool my friends!!</Quote>
   </div>;
 
 export default App;
