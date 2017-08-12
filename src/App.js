@@ -20,7 +20,9 @@ const Button = styled.button`
 `;
 
 const ButtonDanger = Button.extend`background: ${props => props.theme.danger};`;
-const ButtonCrazy = Button.extend`background: ${props => props.theme.crazy};`;
+const ButtonGradient = Button.extend`
+  background: ${props => props.theme.gradient};
+`;
 
 /* ============================== */
 /* ===== the main component ===== */
@@ -29,7 +31,7 @@ const App = () =>
   <div>
     <Button>Basic button</Button>
     <ButtonDanger>Watch out now!</ButtonDanger>
-    <ButtonCrazy>Crazy Gradient!</ButtonCrazy>
+    <ButtonGradient>Gradient Button!</ButtonGradient>
   </div>;
 
 export default App;

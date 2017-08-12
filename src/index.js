@@ -24,9 +24,8 @@ injectGlobal`
 const theme = {
   base: "#a04ed9",
   danger: "tomato",
-  crazy: `background-color: #00DBDE;
-background-image: linear-gradient(225deg, #00DBDE 0%, #FC00FF 100%);
-`
+  gradient: `background-color: #08AEEA;
+background-image: linear-gradient(243deg, #08AEEA 0%, #2AF598 100%);`
 };
 
 ReactDOM.render(

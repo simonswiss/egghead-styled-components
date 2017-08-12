@@ -1,0 +1,10 @@
+we have a React app with styled-components, and we're generating a few theme colors via the <ThemeProvider>.
+
+We're currently outputting 3 buttons, styled with the CSS provided here. They're all using the "base color".
+
+We could use properties - like danger - to conditionally change the background-color here, but we can also "extend" a component's styles.
+
+Let's create a `ButtonDanger` constant, and we'll make it extend the Button component. Button.extend 
+
+This new component inherits all the styles from the main Button, and we can now set the background color to props.theme.danger.
+
