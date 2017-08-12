@@ -1,37 +1,36 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-const Button = styled.button`
-  background: ${props => props.theme.base};
-  color: white;
-  font-size: 1rem;
-  padding: .75rem 2rem;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  border: none;
-  border-radius: 4px;
-  margin: .5rem;
-  transition: all 0.1s;
-
-  &:hover {
-    transform: translateY(1px);
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
-  }
+const spinBounce = keyframes`
+	0% { transform: translateY(0) rotate(0deg); }
+	50% { transform: translateY(40px) rotate(90deg); }
+  100% { transform: translateY(0) rotate(180deg); }
 `;
 
-const ButtonDanger = Button.extend`background: ${props => props.theme.danger};`;
-const ButtonGradient = Button.extend`
-  background: ${props => props.theme.gradient};
+const hue = keyframes`
+  0% { background-color: tomato; }
+  50% { background-color: deeppink; }
+  100% { background-color: tomato; }
 `;
 
-/* ============================== */
-/* ===== the main component ===== */
-/* ============================== */
+const shape = keyframes`
+  0% { border-radius: 5px; }
+  50% { border-radius: 50%; }
+  100% { border-radius: 5px; }
+`;
+
+const Ball = styled.div`
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: ${spinBounce} .5s linear infinite, ${shape} 2s linear infinite,
+    ${hue} 2s linear infinite;
+`;
+
 const App = () =>
   <div>
-    <Button>Basic button</Button>
-    <ButtonDanger>Watch out now!</ButtonDanger>
-    <ButtonGradient>Gradient Button!</ButtonGradient>
+    <Ball />
   </div>;
 
 export default App;
