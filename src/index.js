@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 
-import { ThemeProvider, injectGlobal } from "styled-components";
+import { injectGlobal } from "styled-components";
 
 injectGlobal`
   body {
@@ -21,15 +21,4 @@ injectGlobal`
   }
 `;
 
-const theme = {
-  base: "#a04ed9",
-  danger: "tomato",
-  gradient: `background-color: #08AEEA; background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);`
-};
-
-ReactDOM.render(
-  <ThemeProvider theme={theme}>
-    <App />
-  </ThemeProvider>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
