@@ -22,7 +22,11 @@ injectGlobal`
 `;
 
 const theme = {
-  primary: "#a04ed9"
+  base: "#a04ed9",
+  danger: "tomato",
+  crazy: `background-color: #00DBDE;
+background-image: linear-gradient(225deg, #00DBDE 0%, #FC00FF 100%);
+`
 };
 
 ReactDOM.render(
